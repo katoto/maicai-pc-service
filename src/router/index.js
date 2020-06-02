@@ -11,6 +11,11 @@ const routes = [
         component: Home
     },
     {
+        path: "/home",
+        name: "Home",
+        component: Home
+    },
+    {
         path: "/intro",
         name: "Intro",
         component: () =>
@@ -38,6 +43,24 @@ const routes = [
         name: "contentUs",
         component: () =>
             import(/* webpackChunkName: "contentUs" */ "../views/ContentUs.vue")
+    },
+    {
+        path: "/meat",
+        name: "meat3",
+        component: () =>
+            import(/* webpackChunkName: "meat" */ "../views/Meat3.vue")
+    },
+    {
+        path: "/greens",
+        name: "greens3",
+        component: () =>
+            import(/* webpackChunkName: "greens" */ "../views/Greens3.vue")
+    },
+    {
+        path: "/fruits",
+        name: "fruits3",
+        component: () =>
+            import(/* webpackChunkName: "fruits" */ "../views/Fruits3.vue")
     }
 ];
 

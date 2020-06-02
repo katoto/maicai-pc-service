@@ -9,6 +9,9 @@
         <img src="../assets/head/logo.png" />
       </router-link>
       <ul class="nav-box">
+        <li class="nav showpc">
+          <router-link to="/home">首页</router-link>
+        </li>
         <li class="nav">
           <router-link to="/intro">公司简介</router-link>
         </li>
@@ -90,6 +93,9 @@ export default {
           padding: 14px 0;
         }
       }
+    }
+    .showpc{
+        display: none;
     }
   }
 }

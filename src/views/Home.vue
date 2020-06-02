@@ -1,12 +1,16 @@
 <template>
   <div class="home">
-    <img
+    <a
+      href="javascript:;"
       v-for="(item, index) in list"
       :key="index"
-      :alt="item.name"
-      :src="item.img"
-      class="img"
-    />
+    >
+      <img
+        :alt="item.name"
+        :src="item.img"
+        class="img"
+      />
+    </a>
   </div>
 </template>
 
@@ -56,13 +60,86 @@ export default {
   created() { }
 };
 </script>
-<style lang="less" scoped>
+<style lang="less" >
 .home {
   width: 100%;
-  .img {
+  a {
     display: block;
     width: 100%;
     margin: 0 auto;
+    position: relative;
+    cursor: default;
+    .img {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+    &:nth-child(4)::before {
+      content: " ";
+      position: absolute;
+      bottom: 30px;
+      right: 280px;
+      display: block;
+      height: 70px;
+      border: 1px solid red;
+      background-color: transparent;
+      width: 200px;
+      z-index: 10;
+      cursor: pointer;
+    }
+    &:nth-child(5)::before {
+      content: " ";
+      position: absolute;
+      bottom: 72px;
+      left: 270px;
+      display: block;
+      height: 70px;
+      border: 1px solid red;
+      background-color: transparent;
+      width: 200px;
+      z-index: 10;
+      cursor: pointer;
+    }
+    &:nth-child(6)::before {
+      content: " ";
+      position: absolute;
+      bottom: 108px;
+      right: 420px;
+      display: block;
+      height: 70px;
+      border: 1px solid red;
+      background-color: transparent;
+      width: 200px;
+      z-index: 10;
+      cursor: pointer;
+    }
+    &:nth-child(7)::before {
+      content: " ";
+      position: absolute;
+      top: 270px;
+      left: 430px;
+      display: block;
+      height: 70px;
+      border: 1px solid red;
+      background-color: transparent;
+      width: 200px;
+      z-index: 10;
+      cursor: pointer;
+    }
+    &:nth-child(8)::before {
+      content: " ";
+      position: absolute;
+      bottom: 86px;
+      right: 422px;
+      display: block;
+      height: 70px;
+      border: 1px solid red;
+      background-color: transparent;
+      width: 200px;
+      z-index: 10;
+      cursor: pointer;
+    }
   }
 }
 </style>
