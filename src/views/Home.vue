@@ -5,6 +5,10 @@
       v-for="(item, index) in list"
       :key="index"
     >
+      <i
+        class="click-box"
+        @click="handleClick(index)"
+      ></i>
       <img
         :alt="item.name"
         :src="item.img"
@@ -57,7 +61,30 @@ export default {
     };
   },
   components: {},
-  created() { }
+  created() { },
+  methods: {
+    handleClick(ind = 4) {
+      let _currRouter = '/'
+      switch (ind) {
+        case 3:
+          _currRouter = 'intro'
+            ; break
+        case 4:
+          _currRouter = 'greens'
+            ; break
+        case 5:
+          _currRouter = 'fruits'
+            ; break
+        case 6:
+          _currRouter = 'meat'
+            ; break
+        case 7:
+          _currRouter = 'server'
+            ; break
+      }
+      this.$router.push(_currRouter)
+    }
+  }
 };
 </script>
 <style lang="less" >
@@ -75,66 +102,56 @@ export default {
       margin: 0 auto;
       position: relative;
     }
-    &:nth-child(4)::before {
-      content: " ";
+    &:nth-child(4) .click-box {
       position: absolute;
-      bottom: 30px;
-      right: 280px;
+      bottom: 2vw;
+      right: 18vw;
       display: block;
       height: 70px;
-      border: 1px solid red;
       background-color: transparent;
       width: 200px;
       z-index: 10;
       cursor: pointer;
     }
-    &:nth-child(5)::before {
-      content: " ";
+    &:nth-child(5) .click-box {
       position: absolute;
-      bottom: 72px;
-      left: 270px;
+      bottom: 5vw;
+      left: 17.5vw;
       display: block;
       height: 70px;
-      border: 1px solid red;
       background-color: transparent;
       width: 200px;
       z-index: 10;
       cursor: pointer;
     }
-    &:nth-child(6)::before {
-      content: " ";
+    &:nth-child(6) .click-box {
       position: absolute;
-      bottom: 108px;
-      right: 420px;
+      bottom: 7vw;
+      right: 27vw;
       display: block;
       height: 70px;
-      border: 1px solid red;
       background-color: transparent;
       width: 200px;
       z-index: 10;
       cursor: pointer;
     }
-    &:nth-child(7)::before {
-      content: " ";
+    &:nth-child(7) .click-box {
       position: absolute;
-      top: 270px;
-      left: 430px;
+      top: 18vw;
+      left: 28vw;
       display: block;
       height: 70px;
-      border: 1px solid red;
       background-color: transparent;
       width: 200px;
       z-index: 10;
       cursor: pointer;
     }
-    &:nth-child(8)::before {
-      content: " ";
+    &:nth-child(8) .click-box {
       position: absolute;
-      bottom: 86px;
-      right: 422px;
+      bottom: 5.5vw;
+      right: 27vw;
       display: block;
       height: 70px;
-      border: 1px solid red;
       background-color: transparent;
       width: 200px;
       z-index: 10;

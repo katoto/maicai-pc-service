@@ -49,7 +49,6 @@ export default {
     display: block;
     width: 100%;
     margin: 0 auto;
-    min-height: 40vh;
     &:nth-child(2) {
       margin-top: 90px;
     }
